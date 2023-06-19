@@ -1,0 +1,31 @@
+[project]
+name = "sltable"
+version = "0.0.1"
+description = "A simple terminal table based on only the standard library"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/al4/sltable"
+"Bug Tracker" = "https://github.com/al4/sltablesampleproject/issues"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+typed = ["mypy"]
+
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+
+[tool.pytest.ini_options]
+addopts = ["--import-mode=importlib"]
+pythonpath = "src"
+log_cli = "false"
+log_cli_level = "DEBUG"
+
+[tool.setuptools.package-data]
+"sltable" = ["py.typed"]
